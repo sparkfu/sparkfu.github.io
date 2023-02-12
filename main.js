@@ -6,4 +6,5 @@ addToDoButton.addEventListener('click', function(){
     var paragraph = document.createElement('p')
     paragraph.innerText = inputField.value;
     toDoContainer.appendChild(paragraph);
+    inputField.value = "";
 })
