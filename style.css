@@ -22,20 +22,20 @@ h1 {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #3498db;
+  background-color: #3f3f3f;
   border-radius: 6px;
   margin: 5px;
 }
 
 .button:hover, .button2:hover {
-  background-color: #2980b9;
+  background-color: #575757;
 }
 
 .button2 {
-  background-color: #2ecc71;
+  background-color: #3f3f3f;
 }
 
 .button2:hover {
-  background-color: #27ae60;
+  background-color: #575757;
 }
 
