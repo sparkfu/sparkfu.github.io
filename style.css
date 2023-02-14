@@ -39,6 +39,13 @@ h1 {
   background-color: #27ae60;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
 .dark-mode {
   background-color: black;
   color: white;
