@@ -1,5 +1,6 @@
 body {
-  background-color: bisque;
+  background-color: white;
+  color: black;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -36,4 +37,11 @@ h1 {
 
 .button2:hover {
   background-color: #27ae60;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
 }
