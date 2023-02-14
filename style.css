@@ -23,6 +23,7 @@ h1 {
   color: #fff;
   background-color: #3498db;
   border-radius: 6px;
+  margin: 10px;
 }
 
 .button:hover, .button2:hover {
