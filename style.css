@@ -1,6 +1,6 @@
 body {
-  background-color: white;
-  color: black;
+  background-color: #f2f2f2;
+  color: #333;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -39,14 +39,3 @@ h1 {
   background-color: #27ae60;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-    color: white;
-  }
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
