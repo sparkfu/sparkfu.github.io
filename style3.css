@@ -39,4 +39,7 @@ h1 {
   button[type=submit]:hover {
     background-color: #006666;
   }
-  
+
+  body {
+    background-color: #0f0f0f;
+  }
