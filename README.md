@@ -1,8 +1,8 @@
 # sparkfu.github.io
 This is a website just for fun :D
 
-## Upcoming:
+## Upcoming(maybe):
 ```
--~~ ~~Calender(maybe)~~ ~~
--Remember(maybe)
+-Text files
+-Templates to fold
 ```
