@@ -18,12 +18,3 @@
 
 </body>  
 </html>
-
-<?php
-    extract($_REQUEST);
-    $file = fopen("form.txt" , "a");
-
-    fwrite($file, "name: ");
-    fwrite($file, $username . "\n")
-
-?>
