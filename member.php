@@ -12,9 +12,18 @@
     <h3>You want to be a member?</h3>
     <h2>NOT DONE YET. IN PROGRESS</h2>
 
-    <input type="text" id="name" placeholder="Your Username">
+    <input type="text" name="username" placeholder="Your Username">
     <button class="button">-Be a member-</button>
 
 
 </body>  
 </html>
+
+<?php
+    extract($_REQUEST);
+    $file = fopen("form.txt" , "a");
+
+    fwrite($file, "name: ");
+    fwrite($file, $username . "\n")
+
+?>
