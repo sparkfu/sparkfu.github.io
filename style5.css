@@ -38,3 +38,32 @@ button{
     color: #020929;
 }
 
+select{
+    padding: 7px;
+    border: 1px solid #020929;
+    border-radius: 3px;
+}
+
+.options label,
+.options select {
+    font-family: "Poppins", sans-serif;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+
