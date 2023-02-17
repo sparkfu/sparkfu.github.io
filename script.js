@@ -32,7 +32,25 @@ const initializer = () => {
         option.innerHTML = i;
         fontSizeRef.appendChild(option);
     }
+
+    fontSizeRef.value = 3;
 };
+
+const modifyText = (command,defaultUi, value) => {
+    document.execCommand(command,defaultUi,value);
+};
+
+optionsButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, null);
+    });
+});
+
+advancedOptionButton.forEach((button) => {
+    button.addEventListener("change", () => {
+        modifyText(button.id,false,button.value);
+    });
+});
 
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
