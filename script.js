@@ -32,10 +32,9 @@ const highlighter = (className, needsRemoval) => {
 
                 highlighterRemover(className);
                 if(!alreadyActive) {
-                    button.classList.add("active")
+                    button.classList.add("active");
                 }
-            }
-            else{
+            } else{
                 button.classList.toggle("active");
             }
         });
