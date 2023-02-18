@@ -48,5 +48,18 @@ h1:hover {
   background-color: #575757;
 }
 
+.button3 {
+	background-color: #57b894;
+	box-shadow: 0 6px #4fa283;
+}
+.button3:hover {
+	box-shadow: 0 8px #4fa283;
+	transform: translateY(-3px);
+}
+.button3:active {
+	background-color: #4a9377;
+	box-shadow: 0 5px #407762;
+	transform: translateY(4px);
+}
 
 
