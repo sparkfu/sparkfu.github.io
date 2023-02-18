@@ -18,10 +18,25 @@
     <h3>You want to be a member?</h3>
     <h2>NOT DONE YET. IN PROGRESS</h2>
 
-    <input type="text" id="name">
-    <button type="button" class="button" id="save-btn">Save</button>
+    <input type="text" id="name1" value="">
+    <input type="button" value="save" onclick="save_func()">
 
 
 </body> 
-<script src="script3.js"></script>
+
+<script>
+
+function save_func(){
+    var name = document.getElementById("name1").value;
+
+    var data = [];
+    data.push(name)
+
+
+    var file = new Blob([],{type="text"})
+
+}
+
+</script>
+
 </html>
