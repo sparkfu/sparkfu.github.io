@@ -3,5 +3,8 @@ This is a website just for fun :D
 
 ## Upcoming(maybe):
 ```
--Templates to fold
+-Stopwatch
+-Timer
+-Clock
+-Random names or numbers generator
 ```

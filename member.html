@@ -30,12 +30,16 @@ function save_func(){
     var name = document.getElementById("name1").value;
 
     var data = [];
-    data.push(name)
+    data.push(name);
 
+    var data_string = JSON.stringify(data);
 
-    var file = new Blob([],{type="text"})
-
-}
+    var file = new Blob([data_string], {type:'text'});
+    var anchor = document.createElement("a");
+    anchor.href = URL.createObjectURL(file);
+    anchor.download = "save.txt";
+    anchor.click(); 
+};
 
 </script>
 
