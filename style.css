@@ -2,10 +2,9 @@ body {
   display: grid;
   color: white;
   place-items: center;
-  height: 100vh;
   background-color: #0f0f0f;
   margin: 0rem;
-  overflow: hidden;
+
 }
 
 
