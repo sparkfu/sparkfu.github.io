@@ -6,11 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kostenlose Kaugummies!</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Verwenden Sie ein Grid-Layout, um die Elemente auf verschiedenen Bildschirmgrößen besser anzuordnen */
+      body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        padding: 10px;
+      }
+      
+      /* Passen Sie die Schriftgröße an verschiedene Bildschirmgrößen an */
+      h2, h3 {
+        font-size: 24px;
+      }
+      
+      @media (max-width: 768px) {
+        h2, h3 {
+          font-size: 20px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        h2, h3 {
+          font-size: 16px;
+        }
+      }
+    </style>
 </head>
 <body>
     <h2>Dein/-e Freund/in hat dir Kaugummi gekauft!</h2>
     <h3>Sag ihm/ihr danke bevor du es nimmst!</h3>    
-    <h3>Um das kaugummizu nehmen, klicke einfach das bild!</h3>
 
     <a href="#" onclick="alert('HA HA Das war ein Elektroshock kaugummi!')">
         <img src="Unbenannt12.png" alt="Knopf">
