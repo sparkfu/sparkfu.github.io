@@ -21,6 +21,18 @@ h1:hover {
   color: black;
 }
 
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1rem, 3vw, 5rem);
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+h2:hover {
+  background-color: white;
+  color: black;
+}
 
 .button, .button2, .storage {
   display: inline-block;
