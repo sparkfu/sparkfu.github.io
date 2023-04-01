@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minecraft Commands</title>
+	<link rel="stylesheet" href="stylec.css">
+</head>
+<body>
+	<header>
+		<h1>Minecraft Commands</h1>
+		<nav>
+			<ul>
+				<li><a href="#tp">Teleportieren</a></li>
+				<li><a href="#gamerule">Gamerules</a></li>
+				<li><a href="#spawn">Mobs spawnen</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section id="tp">
+			<h2>Teleportieren</h2>
+			<div class="commands">
+				<h3>/tp</h3>
+				<p>Teleportiert einen Spieler zu einem anderen Spieler oder Ort.</p>
+				<textarea readonly>/tp [Spielername] [Zielort]</textarea>
+			</div>
+			<div class="commands">
+				<h3>/tphere</h3>
+				<p>Teleportiert einen Spieler zu deinem Standort.</p>
+				<textarea readonly>/tphere [Spielername]</textarea>
+			</div>
+		</section>
+		
+		<section id="gamerule">
+			<h2>Gamerules</h2>
+			<div class="commands">
+				<h3>/gamerule</h3>
+				<p>Ändert eine Gamerule.</p>
+				<textarea readonly>/gamerule [Gamerule] [Wert]</textarea>
+			</div>
+			<div class="commands">
+				<h3>/gamerule query</h3>
+				<p>Zeigt den aktuellen Wert einer Gamerule an.</p>
+				<textarea readonly>/gamerule query [Gamerule]</textarea>
+			</div>
+		</section>
+		
+		<section id="spawn">
+			<h2>Mobs spawnen</h2>
+			<div class="commands">
+				<h3>/summon</h3>
+				<p>Erzeugt einen Mob.</p>
+				<textarea readonly>/summon [Mobname] [x] [y] [z]</textarea>
+			</div>
+			<div class="commands">
+				<h3>/kill</h3>
+				<p>Tötet einen Mob.</p>
+				<textarea readonly>/kill [Mobname]</textarea>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
