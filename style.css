@@ -47,6 +47,19 @@ h2:hover {
   margin: 5px;
 }
 
+.button4 {
+  display: inline-block;
+  padding: 30px 60px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3f3f3f;
+  border-radius: 12px;
+  margin: 10px;
+}
+
 .button:hover, .button2:hover {
   background-color: #575757;
 }
