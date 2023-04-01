@@ -11,20 +11,29 @@
 		<h1>Minecraft Commands</h1>
 		<nav>
 			<ul>
-				<li><a href="#tp">Teleportieren!</a></li>
-				<li><a href="#gamerule">Gamerules</a></li>
-				<li><a href="#spawn">Mobs spawnen</a></li>
+				<li><a href="#tp">Realistic MC</a></li>
+				<li><a href="#gamerule">Coming soon</a></li>
+				<li><a href="#spawn">Coming soon</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<main>
 		<section id="tp">
-			<h2>Teleportieren</h2>
+			<h2>RealMC</h2>
 			<div class="commands">
-				<h3>/tp</h3>
-				<p>Teleportiert einen Spieler zu einem anderen Spieler oder Ort.</p>
-				<textarea readonly>/tp [Spielername] [Zielort]</textarea>
+				<h3>Lets Make Minecraft More Realistic!</h3>
+				<p>Arrows shoot through glass, and burning arrows are igniting blocks:</p>
+				<textarea readonly>
+					1. Command repeating,unconditional,always active: 
+					execute at @e[type=arrow,nbt={inGround:1b,inBlockState:{Name:"minecraft:glass_pane"}}] run setblock ~ ~ ~ air destroy
+
+					2. Command repeating,unconditional,always active: 
+					execute at @e[type=arrow,nbt={inGround:1b,Fire:100s}] run setblock ~ ~ ~ fire
+
+					Tutorial:
+					https://www.youtube.com/shorts/CWBlDxFDk_c
+				</textarea>
 			</div>
 			<div class="commands">
 				<h3>/tphere</h3>
