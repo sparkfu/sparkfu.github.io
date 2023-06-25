@@ -12,7 +12,7 @@ button:hover {
 }
 
 h1 a {
-    color: #fff;
+    color: #f77f00;
     font-size: 1.5em;
     text-decoration: none;
     display: inline-block;
@@ -43,7 +43,7 @@ a.effect-underline:hover:after {
   }
 
 .fun-fact-button {
-    background-color: #4f8cff;
+    background-color: #fcbf49;
     color: #fff;
     padding: 15px 25px;
     border: none;
@@ -64,13 +64,6 @@ a.effect-underline:hover:after {
   .fun-fact-container {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-  }
-
-
-  .youtube-logo {
-    position: absolute;
-    top: 20px;
     right: 20px;
   }
 
@@ -210,9 +203,9 @@ a.effect-underline:hover:after {
   }
 
   .search-input:focus {
-    background-color: #fff;
+    background-color: #00669d;
     width: 500px;
-    color: #4f8cff;
+    color: #d62828;
   }
 
   .search-icon {
@@ -278,7 +271,7 @@ a.effect-underline:hover:after {
   }
 
   .quick-links a:hover {
-    background-color: #4f8cff;
+    background-color: #eae2b7;
     color: #000;
     opacity: 1;
   }
