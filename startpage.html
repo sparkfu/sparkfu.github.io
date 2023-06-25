@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SkyChrome-Home</title>
+  <link rel="stylesheet" href="style545.css">
+</head>
+<body>
+
+  <div class="background-animation">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <h1 align="center"><a href="#" class="effect-underline">Skychrome</a></h1>
+      
+    </div>
+    <div class="search-container">
+      <div class="search-input-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search on Google" onkeydown="handleSearch(event)">
+        <button class="search-icon"></button>
+      </div>
+    </div>
+    <div class="quick-links">
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a href="https://www.amazon.com" target="_blank">Amazon</a>
+      <a href="https://www.bing.com" target="_blank">Bing</a>
+      <a href="https://www.netflix.com" target="_blank">Netflix</a>
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      <a href="https://www.github.com" target="_blank">GitHub</a>
+      <a href="https://sparkfu.github.io/" target="_blank">SparkFu</a>
+    </div>
+  </div>
+
+  
+    <div class="fun-fact-container">
+      <button class="fun-fact-button" onmouseover="showFunFact(this)" onmouseout="hideFunFact(this)">Fun Fact</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Game: Number Guess</h1>
+    <div class="game-container">
+      <p>Guess a number between 1 and 100:</p>
+      <div class="input-container">
+        <input type="number" id="guess-input" class="guess-input" min="1" max="100" required onkeydown="handleKeyDown(event)">
+        <button class="game-button" onclick="checkGuess()">Submit</button>
+      </div>
+      <p id="result-message"></p>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h5>this is a beta version</h5>
+
+
+  <script>
+
+var funFacts = [
+  "Es gibt mehr Sterne im Universum als Sandkörner auf der Erde.",
+  "Die Erdbeere ist keine Beere, sondern eine Nuss.",
+  "Einige Vögel können im Flug schlafen.",
+  "Die Wahrscheinlichkeit, dass du von einem Blitz getroffen wirst, ist höher als im Lotto zu gewinnen.",
+  "Erdnüsse gehören zur Familie der Hülsenfrüchte, nicht zu den Nüssen.",
+  "Schnecken haben bis zu 25.000 Zähne.",
+  "Der menschliche Körper enthält genug Kohlenstoff, um etwa 900 Bleistifte zu füllen.",
+  "Elefanten können sich selbst im Spiegel erkennen.",
+  "In Island gibt es keine Mücken.",
+  "Kängurus können nicht rückwärts springen.",
+  "Der Körper eines erwachsenen Menschen besteht zu etwa 60% aus Wasser.",
+  "Die längste Zeit ohne Schlaf, die jemals dokumentiert wurde, beträgt 11 Tage.",
+  "Honig verdirbt nicht. Es wurde sogar in ägyptischen Gräbern gefunden und war noch essbar.",
+  "Der längste Einzelname einer Stadt in den USA besteht aus 58 Buchstaben: 'Taumatawhakatangihangakoauauotamateaturipukakapiki-maungahoronukupokaiwhenuakitnatahu'.",
+  "Einige Pinguine können bis zu 2,5 Meter hoch springen.",
+  "Bienen können Farben sehen, die für das menschliche Auge unsichtbar sind.",
+  "Der menschliche Knochen ist stärker als Beton.",
+  "Der Regenwald produziert etwa 20% des weltweit erzeugten Sauerstoffs.",
+  "Der längste gemessene Bart eines Mannes war 5,33 Meter lang.",
+  "Giraffen haben genauso viele Halswirbel wie Menschen.",
+  "Das menschliche Herz erzeugt genug Druck, um Blut bis zu 10 Meter hoch zu pumpen.",
+  "Ein Krokodil kann seine Zunge nicht herausstrecken.",
+  "Die durchschnittliche Wolke wiegt etwa 500.000 Kilogramm.",
+  "Die meisten Menschen haben mehr als fünf Sinne. Es gibt unter anderem den Gleichgewichtssinn und den Propriozeptionssinn (Körperwahrnehmung).",
+  "Das menschliche Gehirn kann während des Schlafes Gerüche nicht wahrnehmen.",
+  "Der Körper eines Erwachsenen besteht aus etwa 7 Oktillionen Atomen (einer 7 mit 27 Nullen).",
+  "Das menschliche Auge kann etwa 10 Millionen verschiedene Farbtöne erkennen.",
+  "Ein Huhn kann ohne Kopf bis zu zwei Minuten lang weiterlaufen.",
+  "Der längste Satz, der jemals in einem Buch geschrieben wurde, besteht aus 13.955 Wörtern.",
+  "Einige Vögel können schneller als Autos fliegen.",
+  "Die durchschnittliche Person verbringt etwa 25 Jahre ihres Lebens schlafend.",
+  "Einige Pilze leuchten im Dunkeln.",
+  "Die Leber ist das einzige Organ, das sich von selbst regenerieren kann.",
+  "Die durchschnittliche Person hat etwa 1,6 Quadratmeter Haut.",
+  "Es gibt mehr Bakterien in deinem Mund als Menschen auf der Erde.",
+  "Die längste Brücke der Welt ist über 164 Kilometer lang.",
+  "Der älteste bekannte Baum der Welt ist über 4.800 Jahre alt.",
+  "Der längste Fluss der Welt ist der Nil mit einer Länge von etwa 6.650 Kilometern.",
+  "Die längste Zeit ohne Nahrung, die ein Mensch überlebt hat, beträgt 382 Tage.",
+  "Einige Ameisenarten halten als Haustiere Blattläuse.",
+  "Ein Bienenschwarm kann bis zu 60.000 Bienen enthalten.",
+  "Die höchste je gemessene Körpertemperatur eines Menschen betrug 46,5 Grad Celsius.",
+  "Die längste Zeit unter Wasser ohne Sauerstoff betrug 24 Minuten und 3 Sekunden.",
+  "Die größte bekannte Galaxie hat einen Durchmesser von über 5 Millionen Lichtjahren.",
+  "Die längste je gemessene Schlange war über 10 Meter lang.",
+  "Die längste je gemessene Lebensdauer einer Hauskatze betrug 38 Jahre.",
+  "Einige Tiere können mithilfe des Erdmagnetfelds navigieren, darunter Vögel und Schildkröten.",
+  "Einige Pflanzen können über 1.000 Jahre alt werden, wie zum Beispiel die Zypresse Methuselah in den USA.",
+  "Der tiefste Punkt des Ozeans ist der Marianengraben mit einer Tiefe von etwa 11 Kilometern.",
+  "Die längste je gemessene Lebensdauer eines Hundes betrug 29 Jahre und 5 Monate.",
+  "Die höchste jemals gemessene Geschwindigkeit eines Tieres auf dem Land betrug 113 km/h (Gepard).",
+  "Die längste je gemessene Lebensdauer einer Schildkröte betrug über 250 Jahre.",
+  "Der größte Diamant der Welt wiegt über 3.100 Karat (Cullinan-Diamant).",
+  "Die längste je gemessene Spannweite eines Vogels beträgt über 3,7 Meter (Wandratalbatros).",
+  "Der kleinste Knochen im menschlichen Körper ist das Steigbügelchen im Ohr.",
+  "Der höchste Berg der Welt ist der Mount Everest mit einer Höhe von über 8.800 Metern.",
+  "Die längste je gemessene Lebensdauer einer Säugetierart betrug über 200 Jahre (Grönlandwal).",
+  "Die schnellste jemals gemessene Geschwindigkeit eines Tieres im Wasser betrug über 100 km/h (Segelfisch).",
+  "Die längste je gemessene Lebensdauer eines Vogels betrug über 80 Jahre (Albatros).",
+  "Der älteste bekannte Fossilienfund eines Homo sapiens ist etwa 300.000 Jahre alt.",
+  "Die längste je gemessene Lebensdauer eines Reptils betrug über 120 Jahre (Seychellen-Riesenschildkröte).",
+  "Die größte Spinne der Welt hat eine Beinspannweite von über 30 cm (Riesenvogelspinne).",
+  "Die längste je gemessene Lebensdauer eines Insekts betrug über 30 Jahre (Termitenkönigin).",
+  "Die höchste jemals gemessene Geschwindigkeit eines Vogels im Flug betrug über 160 km/h (Wanderfalke).",
+  "Die längste je gemessene Lebensdauer eines Wirbeltiers betrug über 400 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Wirbellosen betrug über 4.000 Jahre (Queller).",
+  "Die höchste jemals gemessene Geschwindigkeit eines Fisches im Wasser betrug über 110 km/h (Mako-Hai).",
+  "Die längste je gemessene Lebensdauer eines Baumes betrug über 5.000 Jahre (Bristlecone-Kiefer).",
+  "Die längste je gemessene Lebensdauer eines wirbellosen Tieres betrug über 200 Jahre (Isopode).",
+  "Der kleinste bekannte Fisch der Welt ist der Zwerg-Minifisch, der weniger als 8 mm lang ist.",
+  "Die längste je gemessene Lebensdauer einer Muschel betrug über 500 Jahre (Islandmuschel).",
+  "Die größte je gemessene Körpergröße eines Menschen betrug über 2,70 Meter (Robert Wadlow).",
+  "Die längste je gemessene Lebensdauer eines Weichtiers betrug über 500 Jahre (Queller).",
+  "Die höchste jemals gemessene Geschwindigkeit eines Insekts betrug über 90 km/h (Gelbrandkäfer).",
+  "Die längste je gemessene Lebensdauer eines wirbellosen Tieres betrug über 4.000 Jahre (Queller).",
+  "Die längste je gemessene Lebensdauer eines Fisches betrug über 200 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Wirbeltiers betrug über 500 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Insekts betrug über 30 Jahre (Termite).",
+  "Die längste je gemessene Lebensdauer einer Muschel betrug über 500 Jahre (Inselmuschel).",
+  "Die längste je gemessene Lebensdauer eines Baumes betrug über 4.500 Jahre (Bristlecone-Kiefer).",
+  "Die längste je gemessene Lebensdauer eines Säugetiers betrug über 200 Jahre (Grönlandwal).",
+  "Die längste je gemessene Lebensdauer eines Vogels betrug über 60 Jahre (Albatros).",
+  "Die höchste jemals gemessene Geschwindigkeit eines Vogels betrug über 240 km/h (Wanderfalke).",
+  "Die längste je gemessene Lebensdauer eines Insekts betrug über 20 Jahre (Ameise).",
+  "Die längste je gemessene Lebensdauer eines wirbellosen Tieres betrug über 500 Jahre (Queller).",
+  "Die längste je gemessene Lebensdauer eines Fisches betrug über 100 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Wirbeltiers betrug über 200 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Insekts betrug über 30 Jahre (Termitenkönigin).",
+  "Die längste je gemessene Lebensdauer einer Muschel betrug über 500 Jahre (Islandmuschel).",
+  "Die längste je gemessene Lebensdauer eines Baumes betrug über 5.000 Jahre (Bristlecone-Kiefer).",
+  "Die längste je gemessene Lebensdauer eines wirbellosen Tieres betrug über 200 Jahre (Isopode).",
+  "Der kleinste bekannte Fisch der Welt ist der Zwerg-Minifisch, der weniger als 8 mm lang ist.",
+  "Die längste je gemessene Lebensdauer einer Muschel betrug über 500 Jahre (Islandmuschel).",
+  "Die längste je gemessene Lebensdauer eines Weichtiers betrug über 500 Jahre (Queller).",
+  "Die höchste jemals gemessene Geschwindigkeit eines Insekts betrug über 90 km/h (Gelbrandkäfer).",
+  "Die längste je gemessene Lebensdauer eines wirbellosen Tieres betrug über 4.000 Jahre (Queller).",
+  "Die längste je gemessene Lebensdauer eines Fisches betrug über 200 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Wirbeltiers betrug über 500 Jahre (Grönlandhai).",
+  "Die längste je gemessene Lebensdauer eines Insekts betrug über 30 Jahre (Termite).",
+  "Die längste je gemessene Lebensdauer einer Muschel betrug über 500 Jahre (Inselmuschel).",
+  "Die längste je gemessene Lebensdauer eines Baumes betrug über 4.500 Jahre (Bristlecone-Kiefer).",
+  "Die längste je gemessene Lebensdauer eines Säugetiers betrug über 200 Jahre (Grönlandwal).",
+    ];
+
+    function showFunFact(button) {
+      var randomIndex = Math.floor(Math.random() * funFacts.length);
+      var fact = funFacts[randomIndex];
+      button.textContent = fact;
+    }
+
+    function hideFunFact(button) {
+      button.textContent = "Fun Fact";
+    }
+
+
+
+
+function handleSearch(event) {
+      if (event.key === "Enter") {
+        var searchInput = document.getElementById("searchInput");
+        var query = searchInput.value;
+        var searchContainer = document.querySelector(".search-container");
+        searchContainer.classList.add("animate-search");
+        setTimeout(function() {
+          window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        }, 500);
+      }
+    }
+
+    function toggleAnimation() {
+      var header = document.querySelector(".header h1");
+      header.classList.toggle("animate-pulse");
+    }
+
+    var targetNumber = Math.floor(Math.random() * 100) + 1; // Zufällige Zahl zwischen 1 und 100 generieren
+    var attempts = 0;
+    var maxAttempts = 10;
+
+    function checkGuess() {
+      var guessInput = document.getElementById("guess-input");
+      var guess = parseInt(guessInput.value);
+
+      if (isNaN(guess)) {
+        document.getElementById("result-message").innerHTML = "Please enter a valid number.";
+        document.getElementById("result-message").className = "result-message error";
+        return;
+      }
+
+      attempts++;
+
+      if (guess === targetNumber) {
+        document.getElementById("result-message").innerHTML = "Congratulations! You guessed the correct number in " + attempts + " attempts.";
+        document.getElementById("result-message").className = "result-message success";
+        disableInputAndButton();
+      } else if (guess < targetNumber) {
+        document.getElementById("result-message").innerHTML = "Try a higher number. Attempts: " + attempts;
+        document.getElementById("result-message").className = "result-message warning";
+      } else {
+        document.getElementById("result-message").innerHTML = "Try a lower number. Attempts: " + attempts;
+        document.getElementById("result-message").className = "result-message warning";
+      }
+
+      if (attempts === maxAttempts) {
+        document.getElementById("result-message").innerHTML = "Game over! The correct number was " + targetNumber + ".";
+        document.getElementById("result-message").className = "result-message error";
+        disableInputAndButton();
+      }
+    }
+
+    function disableInputAndButton() {
+      document.getElementById("guess-input").disabled = true;
+      document.getElementById("game-button").disabled = true;
+    }
+
+    function handleKeyDown(event) {
+      if (event.keyCode === 13) {
+        checkGuess();
+      }
+    }
+  </script>
+</body>
+</html>
