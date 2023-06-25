@@ -1,3 +1,11 @@
+.getgo {
+  background-color: #4f7eff;
+  font-size: 18px;
+  border-radius: 16px;
+  height: 40px;
+  width: 150px;
+}
+
 .datetime { 
   font-size: 10px;
   padding: 14px;
