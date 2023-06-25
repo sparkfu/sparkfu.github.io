@@ -1,3 +1,16 @@
+button{
+  background-color: #dad700;
+  font-size: 20px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  transition-duration: 0.7s;
+}
+
+button:hover {
+  background-color: #ffffff; /* Green */
+  color: rgb(0, 0, 0);
+}
+
 h1 a {
     color: #fff;
     font-size: 1.5em;
