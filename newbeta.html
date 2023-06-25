@@ -52,15 +52,6 @@
     <br>
     <br>
     <br>
-    <h1>Game: Number Guess</h1>
-    <div class="game-container">
-      <p>Guess a number between 1 and 100:</p>
-      <div class="input-container">
-        <input type="number" id="guess-input" class="guess-input" min="1" max="100" required onkeydown="handleKeyDown(event)">
-        <button class="game-button" onclick="checkGuess()">Submit</button>
-      </div>
-      <p id="result-message"></p>
-    </div>
   <br>
   <br>
   <br>
@@ -189,9 +180,6 @@ var funFacts = [
       button.textContent = "Fun Fact";
     }
 
-
-
-
 function handleSearch(event) {
       if (event.key === "Enter") {
         var searchInput = document.getElementById("searchInput");
@@ -207,52 +195,6 @@ function handleSearch(event) {
     function toggleAnimation() {
       var header = document.querySelector(".header h1");
       header.classList.toggle("animate-pulse");
-    }
-
-    var targetNumber = Math.floor(Math.random() * 100) + 1; // Zufällige Zahl zwischen 1 und 100 generieren
-    var attempts = 0;
-    var maxAttempts = 10;
-
-    function checkGuess() {
-      var guessInput = document.getElementById("guess-input");
-      var guess = parseInt(guessInput.value);
-
-      if (isNaN(guess)) {
-        document.getElementById("result-message").innerHTML = "Please enter a valid number.";
-        document.getElementById("result-message").className = "result-message error";
-        return;
-      }
-
-      attempts++;
-
-      if (guess === targetNumber) {
-        document.getElementById("result-message").innerHTML = "Congratulations! You guessed the correct number in " + attempts + " attempts.";
-        document.getElementById("result-message").className = "result-message success";
-        disableInputAndButton();
-      } else if (guess < targetNumber) {
-        document.getElementById("result-message").innerHTML = "Try a higher number. Attempts: " + attempts;
-        document.getElementById("result-message").className = "result-message warning";
-      } else {
-        document.getElementById("result-message").innerHTML = "Try a lower number. Attempts: " + attempts;
-        document.getElementById("result-message").className = "result-message warning";
-      }
-
-      if (attempts === maxAttempts) {
-        document.getElementById("result-message").innerHTML = "Game over! The correct number was " + targetNumber + ".";
-        document.getElementById("result-message").className = "result-message error";
-        disableInputAndButton();
-      }
-    }
-
-    function disableInputAndButton() {
-      document.getElementById("guess-input").disabled = true;
-      document.getElementById("game-button").disabled = true;
-    }
-
-    function handleKeyDown(event) {
-      if (event.keyCode === 13) {
-        checkGuess();
-      }
     }
   </script>
 </body>
