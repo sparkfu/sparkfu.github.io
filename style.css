@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #c8ab5b;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0.4rem;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  background-color: #5bc860;
+}
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
@@ -24,6 +40,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
 h4 {
   font-size: 24px;
   color: #d9d9d9;
@@ -36,7 +58,7 @@ p {
   margin-bottom: 10px;
 }
 
-button.getgo {
+.getgo {
   font-size: 18px;
   color: #ffffff;
   background-color: #007bff;
@@ -47,7 +69,7 @@ button.getgo {
   transition: background-color 0.3s ease;
 }
 
-button.getgo:hover {
+.getgo:hover {
   background-color: #0056b3;
 }
 

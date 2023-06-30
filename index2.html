@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select SkyChrome ver.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="color: #418d3e;">Let´s get started!</h1>
+    <h2><span style="font-size:20px">Start by selecting your</span> <span style="color: #d1ce36; font-size:33px">Theme</span></h2>
+    <button class="button" onclick="copy()">Yellow, Default</button>
+
+
+</body>
+<script>
+    function copy() {
+      var copyText = "https://sparkfu.github.io/yellow_def"
+      navigator.clipboard.writeText(copyText);
+      alert("Copied!")
+    }
+  </script>
+</html>
