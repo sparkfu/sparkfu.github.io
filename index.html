@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="index_style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New, Better</title>
+  <title>SkyHome</title>
 </head>
 <body>
-  <h1>We are currently renewing our design and layout!</h1>
-  <h2>We will be back in a few days</h2>
+
+  <div class="header">
+    <button>SkyHome</button>
+    <button class="header_btn" id="how_btn">How?</button>
+    <button class="header_btn" id="why_btn">Why?</button>
+  </div>
+
+  <h1>A new step into the webs future</h1>
+  <h2>A new home for your browser, free without account</h2>
+
+  <div class="what">
+    <h3>What?</h3>
+    <p>This page is designed to act as a better browser startpage with great customizability and ease.
+      It includes a searchbar using any searchengine of your liking, a notes section and the date aswell as some fun facts
+      to suprise you with knowledge.
+    </p>
+  </div>
+
+  <div class="how" id="div_how">
+    <h3>How?</h3>
+    <p>By setting this page as the default start page of your browser, it will open 
+      automatically every time you open your browser. This will allow you to use
+      our service with ease and enjoy the possibilities of searching the web and
+      making your browser fun again.
+    </p>
+  </div>
+
+  <div class="why" id="div_why">
+    <h3>Why?</h3>
+    <p>We believe that the first thing to see opening a browser is an important
+      aspect for productivity and focus. But even today, most of the startpages
+      of modern browsers don´t offer enough for just that. To solve this issue, we 
+      created a new and better one.
+    </p>
+  </div>
+
+  <div class="header">
+    <a href="tutoral.html">Get going</a>
+    <a href="tutoral.html">Screenshots</a>
+    <a href="tutoral.html">News</a>
+  </div>
+
 </body>
+
+  <script>
+    const how_button = document.getElementById('how_btn');
+    const div_how = document.getElementById('div_how')
+    const div_why = document.getElementById('div_why')
+    const why_button = document.getElementById('why_btn');
+
+    how_button.addEventListener('click', () => {
+      div_how.classList.toggle('light_up')
+    })
+
+    why_button.addEventListener('click', () => {
+      div_why.classList.toggle('light_up')
+    })
+  </script>
+
 </html>
