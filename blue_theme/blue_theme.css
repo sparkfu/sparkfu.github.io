@@ -7,9 +7,23 @@
 
 html, body {
   font-family: 'Century Gothic', sans-serif;
-  background: linear-gradient(135deg, #e0e0e0, #b0b0b0);
+  background: linear-gradient(-45deg, #f8eae5, #c0c0c0, #bdecfd, #a8f5e3);
   color: #3a3a3a;
+  animation: gradient 22s ease infinite;
   height: 100%;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 h1, h2, h3, p {
