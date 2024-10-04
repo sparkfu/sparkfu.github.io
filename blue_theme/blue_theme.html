@@ -11,56 +11,6 @@
 
     <div class="search">
         <input type="text" placeholder="Search on google" class="searchbar">
-        <div class="flex_left">
-            <div class="links">
-                <a href="">Youtube</a>
-                <a href="">Netflix</a>
-                <a href="">Amazon</a>
-                <a href="">Twitter</a>
-                <a href="">Reddit</a>
-                <a href="">Google</a>
-            </div>
-        </div>
     </div>
-
-    <div class="stuff">
-        <div class="notes">
-            <h1>Notes</h1>
-            <p>Write what you want to remember, its stored locally on your device</p>
-            <br>
-            <textarea name="" id=""></textarea>
-        </div>
-        <div class="Facts">
-            <h1>Facts</h1>
-            <p>The oldest tree is over 5000 years old!</p>
-            <br>
-            <button class="transparent">Next one</button>
-        </div>
-        <div class="">
-            <h1>Something</h1>
-            <p>Yeah, we will see whats going to take this place</p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="left_footer">
-            <span id="datetime">Your current time</span>
-        </div>
-
-        <button class="transparent">⚙️</button>
-    </footer>
-    
 </body>
-
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-
-            const currentDateTime = now.toLocaleString();
-
-            document.querySelector('#datetime').textContent = currentDateTime;
-        }
-        setInterval(updateDateTime, 1000)
-    </script>
-
 </html>
