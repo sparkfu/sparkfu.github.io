@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   color: #3a3a3a;
+  text-align: center;
 }
 
 html, body {
   font-family: 'Century Gothic', sans-serif;
-  background: linear-gradient(-45deg, #f8eae5, #c0c0c0, #bdecfd, #a8f5e3);
+  background: linear-gradient(-45deg, #f8eae5, #e4bda4, #c1c5ae, #feffff);
   color: #3a3a3a;
   animation: gradient 22s ease infinite;
   height: 100%;
@@ -32,12 +33,10 @@ h1, h2, h3, p {
 
 .header1 {
   font-size: 5rem;
-  background: linear-gradient(135deg, #8ab9eb, #6c95d8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(71, 160, 182);
   font-weight: bold;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .header1:hover {
@@ -46,8 +45,11 @@ h1, h2, h3, p {
 }
 
 div.search {
+  margin-top: 1.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -75,6 +77,22 @@ input.searchbar:focus {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.08);
   border-color: #4a6ea9;
+}
+
+div.flex_left {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  border: none;
+}
+
+div.links {
+  padding: 1rem;
+  margin: 20px;
+  margin-bottom: 0px;
 }
 
 footer {
