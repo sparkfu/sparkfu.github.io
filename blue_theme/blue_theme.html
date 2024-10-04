@@ -12,18 +12,47 @@
         <div class="container">
             <h1 class="header1">SkyHome</h1>
             <div class="input-wrapper">
-                <input type="text" placeholder="Search on google" class="searchbar">
-                <button class="round_btn">🔍</button>
+                <input type="text" placeholder="Search on google" class="searchbar" id="searchInput">
+                <button class="round_btn" onclick="search_google()">🔍</button>
             </div>
             <div class="input-wrapper">
-                <button>Youtube</button>
-                <button>Youtube</button>
-                <button>Youtube</button>
-                <button>Youtube</button>
-                <button>Youtube</button>
+                <button onclick="youtube()">Youtube</button>
+                <button onclick="amazon()">Amazon</button>
+                <button onclick="reddit()">Reddit</button>
+                <button onclick="google()">Google</button>
+                <button onclick="github()">GitHub</button>
             </div>
         </div>   
     </div>
 
 </body>
+
+<script>
+    function youtube() {
+        window.location.href = "https://youtube.com"
+    }
+
+    function amazon() {
+        window.location.href = "https://amazon.com"
+    }
+
+    function reddit() {
+        window.location.href = "https://reddit.com"
+    }
+
+    function google() {
+        window.location.href = "https://google.com"
+    }
+
+    function github() {
+        window.location.href = "https://github.com"
+    }
+
+    function search_google() {
+        var search = document.getElementById("searchInput").value;
+        var link_to_search = "https://google.com/search?q=" + encodeURIComponent(search);
+        window.location.href = link_to_search
+    }
+</script>
+
 </html>
