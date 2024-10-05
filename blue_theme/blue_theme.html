@@ -6,7 +6,7 @@
     <title>SkyHome</title>
     <link rel="stylesheet" href="blue_theme.css">
 </head>
-<body>
+<body onload="time_display()">
 
     <div class="border">
         <div class="container">
@@ -23,6 +23,10 @@
                 <button onclick="github()">GitHub</button>
             </div>
         </div>   
+    </div>
+
+    <div class="footer">
+        <p id="time">Your current time</p>
     </div>
 
 </body>
@@ -53,6 +57,23 @@
         var link_to_search = "https://google.com/search?q=" + encodeURIComponent(search);
         window.location.href = link_to_search
     }
+
+    function time_display() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML = h + " : " + m + " : " + s;
+        setTimeout(time_display, 1000)
+    }
+
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i}
+        return i
+    }
+
 </script>
 
 </html>

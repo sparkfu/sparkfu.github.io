@@ -83,3 +83,16 @@ div.border {
   padding: 10px;
   border-radius: 20px;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #aaaaaa;
+  color: white;
+  align-items: center;
+}
