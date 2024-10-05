@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHome</title>
+    <link rel="stylesheet" href="grey_theme.css">
+</head>
+<body onload="time_display()">
+
+    <div class="border">
+        <div class="container">
+            <h1 class="header1">SkyHome</h1>
+            <div class="input-wrapper">
+                <input type="text" placeholder="Search on google" class="searchbar" id="searchInput">
+                <button class="round_btn" onclick="search_google()">🔍</button>
+            </div>
+            <div class="input-wrapper">
+                <button onclick="youtube()">Youtube</button>
+                <button onclick="amazon()">Amazon</button>
+                <button onclick="reddit()">Reddit</button>
+                <button onclick="google()">Google</button>
+                <button onclick="github()">GitHub</button>
+            </div>
+        </div>   
+    </div>
+
+    <div class="footer">
+        <p id="time">Your current time</p>
+    </div>
+
+</body>
+
+<script>
+    function youtube() {
+        window.location.href = "https://youtube.com"
+    }
+
+    function amazon() {
+        window.location.href = "https://amazon.com"
+    }
+
+    function reddit() {
+        window.location.href = "https://reddit.com"
+    }
+
+    function google() {
+        window.location.href = "https://google.com"
+    }
+
+    function github() {
+        window.location.href = "https://github.com"
+    }
+
+    function search_google() {
+        var search = document.getElementById("searchInput").value;
+        var link_to_search = "https://google.com/search?q=" + encodeURIComponent(search);
+        window.location.href = link_to_search
+    }
+
+    function time_display() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML = h + " : " + m + " : " + s;
+        setTimeout(time_display, 1000)
+    }
+
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i}
+        return i
+    }
+
+</script>
+
+</html>

@@ -11,7 +11,7 @@ body {
   align-items: flex-start;
   height: 100vh;
   padding-top: 30vh;
-  background-color: #a7d6f5;
+  background-color: #f3ed9a;
 }
 
 .input-wrapper {
@@ -29,23 +29,23 @@ body {
 
 h1 {
   font-size: 5rem;
-  color: #5e5d5d;
+  color: #696969;
 }
 
 input {
-  background-color: #bddff3;
+  background-color: #faf5af;
   text-align: center;
   font-family: 'Century Gothic', sans-serif;
   height: 40px;
   border-radius: 20px;
   width: 30vw;
   padding: 0 15px;
-  border: 2px solid #9c9c9c;
+  border: 2px solid #8d8c8c;
   font-size: 1rem;
 }
 
 input:focus {
-  border-color: #555555;
+  border-color: #666;
   outline: none;
   padding: 20px;
 }
@@ -53,7 +53,7 @@ input:focus {
 .round_btn {
   margin: auto;
   background: transparent;
-  border: 2px solid #9c9c9c;
+  border: 2px solid #8c8c8c;
   border-radius: 50%;
   font-size: 20px;
   height: 40px;
@@ -65,7 +65,7 @@ button {
   margin-bottom: 7px;
   font-family: 'Century Gothic';
   font-size: 15px;
-  border: 2px solid #9c9c9c;
+  border: 2px solid #8c8c8c;
   border-radius: 10px;
   padding: 5px;
   background: transparent;
@@ -80,7 +80,7 @@ h1:hover {
 }
 
 div.border {
-  border: 2px solid #9c9c9c;
+  border: 2px solid #8c8c8c;
   padding: 10px;
   border-radius: 20px;
 }
@@ -93,7 +93,7 @@ div.border {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #80a2b6;
+  background-color: #d6ce5c;
   color: white;
   align-items: center;
 }
